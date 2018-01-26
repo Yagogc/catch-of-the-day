@@ -1,7 +1,7 @@
 import React from 'react'
 
 import Header from './Header'
-import Order from './Order'
+import Order from './Order.jsx'
 import Inventory from './Inventory'
 import Fish from './Fish'
 import sampleFishes from '../sample-fishes'
@@ -50,7 +50,7 @@ class App extends React.Component {
 							addToOrder={this.addToOrder} />)}
 					</ul>
 				</div>
-				<Order/>
+				<Order fishes={this.state.fishes} order={this.state.order}/>
 				<Inventory addFish={this.addFish} loadSamples={this.loadSamples} />
 			</div>
 		)
